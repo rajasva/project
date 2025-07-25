@@ -3,7 +3,7 @@ import { heroData } from './Hero';
 import { aboutData } from './About';
 import { experiencesData } from './Experience';
 import { skillsData } from './Skills';
-import { certificationsData } from './Certifications';
+// Removed certificationsData import
 
 const ResumePDF = forwardRef<HTMLDivElement>((props, ref) => (
   <div
@@ -56,10 +56,8 @@ const ResumePDF = forwardRef<HTMLDivElement>((props, ref) => (
         {/* Certificates */}
         <div className="w-full">
           <h3 className="text-base font-semibold border-b border-gray-600 pb-1 mb-2">CERTIFICATES</h3>
-          <ul className="text-sm list-disc list-inside">
-            {certificationsData.map((cert, idx) => (
-              <li key={idx}>{cert.title}</li>
-            ))}
+          <ul className="text-sm list-disc list-inside text-gray-400">
+            {/* Add your certificates here in the future. */}
           </ul>
         </div>
       </div>
@@ -105,12 +103,8 @@ const ResumePDF = forwardRef<HTMLDivElement>((props, ref) => (
         {/* Certifications */}
         <div className="mb-6">
           <h3 className="text-xl font-bold mb-2">CERTIFICATIONS</h3>
-          <ul className="text-sm list-disc list-inside">
-            {certificationsData.map((cert, idx) => (
-              <li key={idx}>
-                <span className="font-semibold text-purple-700">{cert.title}</span> - <span className="text-blue-700">{cert.issuer}</span> ({cert.date})
-              </li>
-            ))}
+          <ul className="text-sm list-disc list-inside text-gray-400">
+            {/* Add your certifications here in the future. */}
           </ul>
         </div>
       </div>
